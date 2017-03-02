@@ -24,7 +24,7 @@ syn match     rscComment      /^#.*/
 syn match     rscSubMenu      "\([a-z]\)\@<!/[a-zA-Z-]*"
 
 " variables are matched by looking at strings ending with "=", e.g. var=
-syn match     rscVariable     "[a-zA-Z0-9-/]*\(=\)\@="
+syn match     rscParameter    "[a-zA-Z0-9-/]*\(=\)\@="
 syn match     rscVariable     "$[a-zA-Z0-9-]*"
 
 " colored for clarity
@@ -128,6 +128,7 @@ syn region    rscString       start=+L\="+ skip=+\\\\\|\\"+ end=+"+ contains=rsc
 hi link rscComment              Comment
 hi link rscSubMenu              Function
 hi link rscVariable             Identifier
+hi link rscParameter            Statement
 hi link rscDelimiter            Operator
 hi link rscService              Type
 hi link rscInterface            Type
